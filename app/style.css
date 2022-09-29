@@ -1,0 +1,243 @@
+/* ............. Css Resets ........... */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #e8e5e5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reusable classes ........... */
+
+.limit {
+  padding-inline: 0.9rem;
+  padding-block: 0.7rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-al-c {
+  align-items: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+/* ............... Main Content .............. */
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.todo-cont {
+  width: 40rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.container h1 {
+  font-size: 1.4rem;
+  color: rgb(30, 30, 30);
+}
+
+.refresh {
+  color: rgb(143, 143, 143);
+}
+
+.refresh:hover {
+  cursor: pointer;
+}
+
+.input-cont {
+  position: relative;
+}
+
+.todo-input {
+  width: 100%;
+  font-style: italic;
+  border: none;
+  font-size: 1rem;
+}
+
+.error-cont {
+  display: none;
+}
+
+.error {
+  background-color: rgb(235, 163, 163);
+  color: rgb(53, 1, 1);
+  width: 90%;
+  margin: 0.5rem auto;
+  padding: 0.2rem;
+}
+
+.show {
+  display: block;
+}
+
+.todo-list {
+  width: 100%;
+}
+
+.todo {
+  width: inherit;
+  font-size: 1.15rem;
+}
+
+.todo:focus,
+.todo:has(.todo-editable:focus) {
+  background-color: #ebe998;
+}
+
+.enter-key {
+  width: 0.8rem;
+  height: 0.8rem;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 1rem;
+  opacity: 0.5;
+  cursor: text;
+}
+
+.text {
+  gap: 0.3rem;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1.15rem;
+  background-color: #fff;
+  color: rgb(143, 143, 143);
+  font: inherit;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 0.15rem;
+  margin: 0;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  -ms-border-radius: 0.15rem;
+  -o-border-radius: 0.15rem;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  scale: 0;
+  box-shadow: inset 1em 1em black;
+  transition: 50ms transform ease-in-out;
+  -webkit-transition: 50ms transform ease-in-out;
+  -moz-transition: 50ms transform ease-in-out;
+  -ms-transition: 50ms transform ease-in-out;
+  -o-transition: 50ms transform ease-in-out;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked {
+  color: transparent;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:checked::before {
+  scale: 1;
+}
+
+.todo-editable:focus {
+  outline: none;
+}
+
+.todo-move {
+  cursor: url("./assets/move.cur"), auto;
+}
+
+.todo-delete {
+  cursor: pointer;
+  display: none;
+}
+
+.todo-move,
+.todo-delete {
+  color: rgb(143, 143, 143);
+  margin-right: 0.3rem;
+}
+
+.todo-move:is(:active, :hover),
+.todo-delete:is(:active, :hover) {
+  color: rgb(4, 4, 4);
+}
+
+.clear-all {
+  border: none;
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.15rem;
+  transition: background-color 200ms ease-in-out;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -ms-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+}
+
+.clear-all:hover {
+  cursor: pointer;
+  background-color: rgb(183, 176, 176);
+}
