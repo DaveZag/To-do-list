@@ -1,0 +1,28 @@
+import { todoList } from './selectors.js';
+
+function displayTask(task) {
+  const todo = document.createElement('li');
+  todo.classList.add('todo', 'flex', 'flex-jc-sb', 'limit');
+  todo.setAttribute('tabindex', '0');
+  todoList.appendChild(todo);
+  const block1 = document.createElement('div');
+  block1.classList.add('todo-block1');
+  todo.appendChild(block1);
+  const todoText = document.createElement('div');
+  todoText.classList.add('flex', 'flex-center', 'text');
+  todoText.innerHTML = `
+        <input class="check" type="checkbox" name="todo" />
+            <span class="todo-editable" contenteditable="true"
+          >${task.desc}</span>
+      `;
+  block1.appendChild(todoText);
+  const block2 = document.createElement('div');
+  block2.classList.add('todo-block2');
+  block2.innerHTML = `
+        <i class="fa-solid fa-ellipsis-vertical todo-move"></i>
+        <i class="fa-solid fa-trash-can todo-delete"></i>
+      `;
+  todo.appendChild(block2);
+}
+
+export default displayTask;
