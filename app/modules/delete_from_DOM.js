@@ -25,8 +25,8 @@ export default function deleteFromDom() {
 
       todos.forEach((todo) => {
         if (item === todo) {
-          delBtn.classList.toggle('show');
-          moveBtn.classList.toggle('hide');
+          delBtn.classList.add('show');
+          moveBtn.classList.add('hide');
         } else {
           todo.children[1].children[0].children[0].classList.remove('hide');
           todo.children[1].children[1].children[0].classList.remove('show');

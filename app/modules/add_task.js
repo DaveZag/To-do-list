@@ -4,6 +4,7 @@ import saveToLocal from './save_to_local.js';
 import displayOnAdd from './display_tasks_onAdd.js';
 import { counter } from './taskArr.js';
 import editTask from './edit_content.js';
+// import checkState from './checkboxes.js';
 
 // Create new task on keyboard enter and call funtion to save to Browser's localStorage
 function add() {
@@ -22,6 +23,7 @@ function add() {
         errorMsg.classList.add('show');
       }
       editTask();
+      // checkState();
     }
   });
 
