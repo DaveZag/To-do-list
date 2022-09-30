@@ -7,6 +7,7 @@ import { counter } from './taskArr.js';
 // Create new task on keyboard enter and call funtion to save to Browser's localStorage
 function add() {
   let taskId = counter;
+
   taskInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       if (taskInput.value !== '') {

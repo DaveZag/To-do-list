@@ -8,8 +8,8 @@ export default function editTask() {
       if (e.key === 'Enter') {
         e.preventDefault();
         editedText = todo.innerText;
+        console.log(editedText);
       }
-      return editedText;
     });
   });
 }

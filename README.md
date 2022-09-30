@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[**See Project 🚀**](https://davezag.github.io/Awesome_books_ES6/)
+[**See Project 🚀**](https://davezag.github.io/To-do-list/)
 
 ## Screenshot
 
