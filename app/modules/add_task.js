@@ -3,6 +3,7 @@ import { taskInput, errorMsg } from './selectors.js';
 import saveToLocal from './save_to_local.js';
 import displayOnAdd from './display_tasks_onAdd.js';
 import { counter } from './taskArr.js';
+import editTask from './edit_content.js';
 
 // Create new task on keyboard enter and call funtion to save to Browser's localStorage
 function add() {
@@ -11,7 +12,7 @@ function add() {
   taskInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       if (taskInput.value !== '') {
-        const newTask = new Task(taskInput.value);
+        const newTask = new Task(taskInput.value.trim());
         newTask.id = taskId;
         displayOnAdd(newTask);
         saveToLocal(newTask);
@@ -20,6 +21,7 @@ function add() {
       } else {
         errorMsg.classList.add('show');
       }
+      editTask();
     }
   });
 

@@ -11,8 +11,6 @@ function checkStorage() {
   } else {
     tasks = JSON.parse(localStorage.getItem('tasks'));
     counter = tasks[tasks.length - 1].id + 1;
-    // counter = setTimeout(() => tasks.length, 1000);
-    // console.log(counter);
   }
 
   tested.push(tasks);
