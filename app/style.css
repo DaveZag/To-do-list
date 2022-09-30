@@ -236,12 +236,11 @@ input[type="checkbox"]:checked::before {
 }
 
 .button {
-  /* background-color: transparent; */
+  background-color: transparent;
   border: none;
   outline: none;
   padding-inline: 0.2rem;
   z-index: 29;
-  /* background-color: red; */
 }
 
 button:is(:hover, :active) > i {
