@@ -46,6 +46,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
@@ -110,11 +111,25 @@ a {
   color: rgb(30, 30, 30);
 }
 
-.refresh {
+.delete-all {
   color: rgb(143, 143, 143);
+  cursor: pointer;
+  transition: transform 500ms ease-in-out;
+  -webkit-transition: transform 500ms ease-in-out;
+  -moz-transition: transform 500ms ease-in-out;
+  -ms-transition: transform 500ms ease-in-out;
+  -o-transition: transform 500ms ease-in-out;
 }
 
-.refresh:hover {
+.rotateIcon {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.delete-all:hover {
   cursor: pointer;
 }
 
@@ -159,6 +174,11 @@ a {
 
 .hide {
   display: none !important;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(60, 60, 60);
 }
 
 .todo-list {
@@ -240,7 +260,6 @@ input[type="checkbox"]:checked::before {
   border: none;
   outline: none;
   padding-inline: 0.2rem;
-  z-index: 29;
 }
 
 button:is(:hover, :active) > i {

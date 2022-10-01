@@ -7,7 +7,7 @@ export default function editTask() {
 
   if (
     localStorage.getItem('tasks') !== null
-    || localStorage.getItem('tasks') !== '[]'
+    && localStorage.getItem('tasks') !== '[]'
   ) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }

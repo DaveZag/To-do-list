@@ -56,5 +56,5 @@ module.exports = {
   ],
 
   // Define which mode we're working in which determines if our files will be minified or full.
-  mode: 'development',
+  mode: 'production',
 };
