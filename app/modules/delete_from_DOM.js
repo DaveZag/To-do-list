@@ -7,8 +7,8 @@ export default function deleteFromDom() {
     const parent = item.parentElement.parentElement;
     // remove element from Dom when button is clicked
     if (
-      item.nodeName === 'BUTTON'
-      && item.children[0].classList.contains('todo-delete')
+      item.nodeName === 'BUTTON' &&
+      item.children[0].classList.contains('todo-delete')
     ) {
       item.parentElement.parentElement.remove();
 

@@ -3,8 +3,8 @@ function checkStorage() {
   let counter;
   const tested = [];
   if (
-    localStorage.getItem('tasks') === null
-    || localStorage.getItem('tasks') === '[]'
+    localStorage.getItem('tasks') === null ||
+    localStorage.getItem('tasks') === '[]'
   ) {
     tasks = [];
     counter = tasks.length + 1;

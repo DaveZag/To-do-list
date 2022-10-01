@@ -135,6 +135,7 @@ a {
 
 .input-cont {
   position: relative;
+  overflow-x: hidden;
 }
 
 .todo-input {
