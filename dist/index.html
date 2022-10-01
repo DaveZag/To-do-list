@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="./assets/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <script
+      src="https://kit.fontawesome.com/bc94a42a6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Todo List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="container flex flex-center">
+      <div class="todo-cont">
+        <header class="header limit flex flex-jc-sb flex-al-c">
+          <h1>Today's To Do</h1>
+          <button class="button delete-all">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+        </header>
+        <hr />
+        <div class="input-cont">
+          <input
+            class="todo-input limit"
+            type="text"
+            placeholder="Add to your list..."
+            required="required"
+          />
+          <div class="enter-key">
+            <img src="./assets/enter.png" alt=" " />
+          </div>
+        </div>
+        <div class="error-cont">
+          <hr />
+          <div class="error">Please Enter a task.</div>
+        </div>
+        <hr />
+
+        <ul class="todo-list"></ul>
+        <button class="clear-all">Clear all completed</button>
+      </div>
+    </div>
+  </body>
+</html>
