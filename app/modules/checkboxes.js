@@ -4,8 +4,8 @@ let tasks;
 function checkState() {
   todoList.addEventListener('click', (e) => {
     if (
-      localStorage.getItem('tasks') !== null &&
-      localStorage.getItem('tasks') !== '[]'
+      localStorage.getItem('tasks') !== null
+      && localStorage.getItem('tasks') !== '[]'
     ) {
       tasks = JSON.parse(localStorage.getItem('tasks'));
     }
