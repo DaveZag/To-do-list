@@ -1,4 +1,4 @@
-import { delAllBtn, todoList } from './selectors.js';
+import { delAllBtn, todos } from './selectors.js';
 
 export default function clearAllTasks() {
   delAllBtn.addEventListener('click', () => {
@@ -11,8 +11,11 @@ export default function clearAllTasks() {
       delAllBtn.classList.remove('rotateIcon');
     }
     localStorage.clear();
+    const arrTodo = [...todos];
     setTimeout(() => {
-      todoList.remove();
+      arrTodo.forEach((element) => {
+        element.remove();
+      });
     }, 400);
   });
 }

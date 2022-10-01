@@ -1,62 +1,33 @@
-import { editable } from './selectors.js';
+import { todoList } from './selectors.js';
 
 export default function editTask() {
-  const arrEdit = [...editable];
-
   let tasks;
 
-  if (
-    localStorage.getItem('tasks') !== null ||
-    localStorage.getItem('tasks') !== '[]'
-  ) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
+  todoList.addEventListener('click', (e) => {
+    if (
+      localStorage.getItem('tasks') !== null
+      || localStorage.getItem('tasks') !== '[]'
+    ) {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
 
-  arrEdit.forEach((element) => {
-    const itemToEdit = element.innerText;
+    const itemToEdit = e.target;
+    const textContent = e.target.innerText;
     let editedText;
-    let editedArr;
-    element.addEventListener('input', () => {
-      editedText = element.innerText;
-      editedArr = tasks.map((task) => {
-        if (task.desc === itemToEdit) {
-          //  return modified object property
-          return { ...task, desc: `${editedText}` };
-        }
-        return task;
+    if (e.target.classList.contains('todo-editable')) {
+      itemToEdit.addEventListener('input', () => {
+        editedText = itemToEdit.innerText;
+
+        const editedArray = tasks.map((task) => {
+          if (task.desc === textContent) {
+            //  return modified object property
+            return { ...task, desc: `${editedText}` };
+          }
+          return task;
+        });
+
+        localStorage.setItem('tasks', JSON.stringify(editedArray));
       });
-      localStorage.setItem('tasks', JSON.stringify(editedArr));
-    });
+    }
   });
 }
-
-// import { editable } from './selectors.js';
-
-// export default function editTask() {
-//   const arrEdit = [...editable];
-
-//   let tasks;
-//   if (
-//     localStorage.getItem('tasks') !== null &&
-//     localStorage.getItem('tasks') !== '[]'
-//   ) {
-//     tasks = JSON.parse(localStorage.getItem('tasks'));
-//   }
-
-//   arrEdit.forEach((element) => {
-//     const itemToEdit = element.innerText;
-//     let editedText;
-//     let editedArr;
-//     element.addEventListener('input', () => {
-//       editedText = element.innerText.trim();
-//       editedArr = tasks.map((task) => {
-//         if (task.desc === itemToEdit) {
-//           //  return modified object property
-//           return { ...task, desc: `${editedText}` };
-//         }
-//         return task;
-//       });
-//       localStorage.setItem('tasks', JSON.stringify(editedArr));
-//     });
-//   });
-// }
