@@ -17,10 +17,10 @@ function displayTask(task) {
       `;
   block1.appendChild(todoText);
   const block2 = document.createElement('div');
-  block2.classList.add('todo-block2');
+  block2.classList.add('todo-block2', 'flex', 'flex-center');
   block2.innerHTML = `
-        <i class="fa-solid fa-ellipsis-vertical todo-move"></i>
-        <i class="fa-solid fa-trash-can todo-delete"></i>
+        <button class="flex flex-center button"><i class="fa-solid fa-ellipsis-vertical todo-move"></i></button>
+        <button class="flex flex-center button"><i class="fa-solid fa-trash-can todo-delete"></i></button>
       `;
   todo.appendChild(block2);
 }
