@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name: Todo List
+# Todo List
 
 > This project is a simple To-Do List built to keep track of tasks that need to be done.
 

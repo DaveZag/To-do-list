@@ -1,5 +1,3 @@
-// import { tasks } from './taskArr.js';
-
 function deleteInStorage(element) {
   let tasks;
   if (

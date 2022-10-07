@@ -11,14 +11,9 @@ function clearCompleted() {
     });
 
     // delete from localStorage
-    let tasks;
-    if (
-      localStorage.getItem('tasks') !== null
-      && localStorage.getItem('tasks') !== '[]'
-    ) {
-      tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
-    // const arrClear = [...checkboxes];
+    const tasks = localStorage.getItem('tasks')
+      ? JSON.parse(localStorage.getItem('tasks'))
+      : [];
     const arrUnchecked = tasks.filter((element) => element.completed !== true);
     localStorage.setItem('tasks', JSON.stringify(arrUnchecked));
   });
