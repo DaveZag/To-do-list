@@ -18,6 +18,7 @@ describe('add and delete test', () => {
 
     expect(document.getElementsByClassName('todo')).toHaveLength(1);
   });
+
   test('Deletes properly from Dom and localStorage', () => {
     document.getElementsByClassName('todo');
     const todo = document.querySelector('.todo');
