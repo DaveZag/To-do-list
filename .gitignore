@@ -1,4 +1,6 @@
 #VScode config 
 .vscode
 node_modules/
+.prettierrc.js
 .prettierrc
+coverage

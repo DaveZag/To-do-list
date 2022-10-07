@@ -1,10 +1,10 @@
 import { todoList } from './selectors.js';
 
-function displayTask(task) {
+function displayTask(task, list = todoList) {
   const todo = document.createElement('li');
   todo.classList.add('todo', 'flex', 'flex-jc-sb', 'limit');
   todo.setAttribute('tabindex', '0');
-  todoList.appendChild(todo);
+  list.appendChild(todo);
   const block1 = document.createElement('div');
   block1.classList.add('todo-block1');
   todo.appendChild(block1);
