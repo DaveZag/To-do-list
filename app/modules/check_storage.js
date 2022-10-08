@@ -2,8 +2,8 @@ function checkStorage() {
   let tasks;
 
   if (
-    localStorage.getItem('tasks') === null
-    || localStorage.getItem('tasks') === '[]'
+    localStorage.getItem('tasks') === null ||
+    localStorage.getItem('tasks') === '[]'
   ) {
     tasks = [];
   } else {

@@ -1,8 +1,8 @@
 function deleteInStorage(element) {
   let tasks;
   if (
-    localStorage.getItem('tasks') !== null
-    && localStorage.getItem('tasks') !== '[]'
+    localStorage.getItem('tasks') !== null &&
+    localStorage.getItem('tasks') !== '[]'
   ) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
