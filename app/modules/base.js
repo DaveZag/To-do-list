@@ -1,5 +1,7 @@
 import clearAllTasks from './reinitialize_tasks.js';
-import { taskInput, errorMsg, todoList, clearBtn } from './selectors.js';
+import {
+  taskInput, errorMsg, todoList, clearBtn,
+} from './selectors.js';
 import deleteFromDom from './delete_from_DOM.js';
 import add from './add.js';
 import displayOnLoad from './display_tasks_onLoad.js';
@@ -30,8 +32,8 @@ const base = () => {
 
     // remove element from Dom when button is clicked
     if (
-      item.nodeName === 'BUTTON' &&
-      item.children[0].classList.contains('todo-delete')
+      item.nodeName === 'BUTTON'
+      && item.children[0].classList.contains('todo-delete')
     ) {
       deleteFromDom(parent);
     }

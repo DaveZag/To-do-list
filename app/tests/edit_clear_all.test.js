@@ -27,9 +27,10 @@ describe('Tests for editing, clearing all completed tasks and checking tasks', (
 
     // element innerText edited in DOM
     expect(document.getElementsByClassName('todo-editable')[0].innerText).toBe(
-      'Hello'
+      'Hello',
     );
   });
+
   test('Properly checks tasks', () => {
     const checkbox = document.getElementsByClassName('check');
     checkbox[0].checked = true;
@@ -49,5 +50,4 @@ describe('Tests for editing, clearing all completed tasks and checking tasks', (
     // element removed from DOM
     expect(document.getElementsByClassName('todo')).toHaveLength(0);
   });
-
 });
