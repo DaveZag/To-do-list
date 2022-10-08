@@ -50,11 +50,24 @@ code .
 
 Then using the live server of VS Code you can view the page.
 
-## 👤Author
+### Testing
+This project contains some function tests. To run them, you first need to install [node.js](https://nodejs.org/en/download/). Then open the copy of this project that you cloned either in vscode or command prompt.<br>
+Finall run the following command in the CLI(Terminal).
+```
+npm test
+```
 
+## 👤Authors
+👤 **Dave Zagabe**
 - GitHub: [@Dave Zag](https://github.com/DaveZag)
 - Twitter: [@Dave Zagabe](https://twitter.com/davezagabe2)
 - LinkedIn: [@Dave Zagabe](https://www.linkedin.com/in/dave-zagabe)
+
+👤 **Tashobya Israel**
+
+- GitHub: [@Tash Israel](https://github.com/tashisrael)
+- Twitter: [@Tash Israel](https://twitter.com/tashisrael)
+- Linkedin: [@Tashoya-Israel](https://www.linkedin.com/in/tashobya-israel-6a66b0181/l)
 
 ## 🤝 Contributing
 
