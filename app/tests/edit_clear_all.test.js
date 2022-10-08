@@ -30,4 +30,24 @@ describe('Tests for editing, clearing all completed tasks and checking tasks', (
       'Hello'
     );
   });
+  test('Properly checks tasks', () => {
+    const checkbox = document.getElementsByClassName('check');
+    checkbox[0].checked = true;
+
+    checkState(checkbox[0]);
+
+    // checkbox state updated
+    expect(JSON.parse(localStorage.getItem('tasks'))[0].completed).toBe(true);
+  });
+
+  test('Properly clears all checked tasks', () => {
+    clearCompleted();
+
+    // element removed from localStorage
+    expect(JSON.parse(localStorage.getItem('tasks'))).toHaveLength(0);
+
+    // element removed from DOM
+    expect(document.getElementsByClassName('todo')).toHaveLength(0);
+  });
+
 });
