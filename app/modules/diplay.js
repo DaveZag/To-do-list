@@ -4,6 +4,7 @@ function displayTask(task, list = todoList) {
   const todo = document.createElement('li');
   todo.classList.add('todo', 'flex', 'flex-jc-sb', 'limit');
   todo.setAttribute('tabindex', '0');
+  todo.id = task.id;
   list.appendChild(todo);
   const block1 = document.createElement('div');
   block1.classList.add('todo-block1');
