@@ -28,5 +28,4 @@ describe('add and delete test', () => {
     expect(document.getElementsByClassName('todo')).toHaveLength(0);
     expect(localStorage.getItem('tasks')).toBe('[]');
   });
-
 });
