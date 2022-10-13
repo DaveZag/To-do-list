@@ -1,5 +1,5 @@
-import add from './add.js';
-import deleteFromDOM from './delete_from_DOM.js';
+import add from '../modules/add.js';
+// import deleteFromDOM from '../modules/delete_from_DOM.js';
 
 describe('add and delete test', () => {
   test(' Adds properly a task', () => {
@@ -9,6 +9,7 @@ describe('add and delete test', () => {
     type="text"
     placeholder="Add to your list..."
     required="required"
+    value = "Homework"
   />
     <ul class="todo-list"></ul>`;
 
@@ -17,14 +18,5 @@ describe('add and delete test', () => {
     add(taskInput);
 
     expect(document.getElementsByClassName('todo')).toHaveLength(1);
-  });
-
-  test('Deletes properly from Dom and localStorage', () => {
-    document.getElementsByClassName('todo');
-    const todo = document.querySelector('.todo');
-    deleteFromDOM(todo);
-
-    expect(document.getElementsByClassName('todo')).toHaveLength(0);
-    expect(localStorage.getItem('tasks')).toBe('[]');
   });
 });
