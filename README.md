@@ -53,7 +53,7 @@ Then using the live server of VS Code you can view the page.
 
 ### Testing
 This project contains some function tests. To run them, you first need to install [node.js](https://nodejs.org/en/download/). Then open the copy of this project that you cloned either in vscode or command prompt.<br>
-Finall run the following command in the CLI(Terminal).
+Finally, run the following command in the CLI(Terminal).
 ```
 npm test
 ```
